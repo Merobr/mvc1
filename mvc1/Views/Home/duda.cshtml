@@ -1,0 +1,22 @@
+﻿@model mvc1.Models.dudaModel
+@{
+    Layout = "_Layoutdark";
+}
+@{
+}
+hello duda
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.Label("Somar")
+        @Html.TextBoxFor(model => model.num1, new {Type = "number"})
+        @Html.Label(" + ")
+        @Html.TextBoxFor(model => model.num2, new { Type = "number" })
+        <br />
+        <h3>Resultado: @(Model == null ? "" : Model.resultado)</h3>
+
+    </div>
+
+    <button type="submit">Enviar</button>
+}
